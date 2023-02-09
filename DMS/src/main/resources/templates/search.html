@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">  
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog School Management System</title>
+</head>
+<body style="background-color:yellow;" >
+<form th:action="@{/dogs/{id} (id=${dog.id})}" th:object="${dog}" method="POST">
+<div>
+				<label> Name </label> 
+				<input type="text" name="name"  th:field="*{name}"	
+placeholder="Enter Dog Name"/>
+			</div>
+
+			<div>
+				<label> Breed </label> 
+				<input type="text" name="breed"  th:field="*{breed}"	
+placeholder="Enter Dog Breed" />
+			</div>
+			
+			<div>
+				<button type="submit"  class="btn">Submit</button>
+			</div>
+</form>
+</body>
+</html>
+
